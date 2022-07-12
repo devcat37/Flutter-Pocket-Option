@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pocket_option/internal/services/app_redirects.dart';
 import 'package:pocket_option/internal/utils/infrastructure.dart';
 
@@ -23,8 +24,21 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     super.initState();
   }
 
+  Widget _buildContent(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SvgPicture.asset(
+          'assets/logo/logo.svg',
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: _buildContent(context),
+    );
   }
 }
