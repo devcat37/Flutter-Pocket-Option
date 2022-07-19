@@ -6,6 +6,19 @@ const blackColor = Color(0xFF000000);
 const whiteColor = Color(0xFFFFFFFF);
 
 const backgroundColor = Color(0xFF1C1F2E);
+const surfaceColor = Color(0xFF24283A);
+const redColor = Color(0xFFE04A39);
+const greenColor = Color(0xFF60B358);
+
+const mainPageGradient = [
+  Color(0xFF183A6A),
+  Color(0xFF0A2041),
+];
+
+const buttonGradient = [
+  Color(0xFF4294F2),
+  Color(0xFF183FD6),
+];
 
 // Paddings.
 const sidePadding = sidePadding24;

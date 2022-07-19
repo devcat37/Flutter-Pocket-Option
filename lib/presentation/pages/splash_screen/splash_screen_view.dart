@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pocket_option/internal/services/app_redirects.dart';
+import 'package:pocket_option/internal/services/service_locator.dart';
+import 'package:pocket_option/internal/states/simulator_state.dart';
 import 'package:pocket_option/internal/utils/infrastructure.dart';
 
 class SplashScreenView extends StatefulWidget {
@@ -17,7 +20,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     SchedulerBinding.instance?.addPostFrameCallback(
       (_) => Future.delayed(
         aSecond * 3,
-        () => replaceWithSimulator(context),
+        () => replaceWithMainPage(context),
       ),
     );
 
@@ -25,13 +28,17 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   }
 
   Widget _buildContent(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SvgPicture.asset(
-          'assets/logo/logo.svg',
-        ),
-      ],
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            'assets/logo/logo.svg',
+            height: 120.r,
+            width: 120.r,
+          ),
+        ],
+      ),
     );
   }
 
