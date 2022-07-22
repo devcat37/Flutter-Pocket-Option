@@ -61,8 +61,8 @@ void main() async {
       settings: tr.Settings(
           paramNames: tr.ParamNames(
     databaseRoot: 'json_potradeapp',
-    baseUrl1: '-',
-    baseUrl2: '-',
+    baseUrl1: 'hesoya',
+    baseUrl2: 'lika',
     url11key: 'tennun',
     url12key: 'juttiy',
     url21key: 'brovnc',
