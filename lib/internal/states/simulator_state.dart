@@ -62,7 +62,7 @@ abstract class _SimulatorStateBase with Store {
     final DateTime now = DateTime.now();
 
     /// Количество минут которое можно отобразить на экране.
-    const int minutesOnScreen = 50;
+    const int minutesOnScreen = 30;
     for (int i = 0; i < minutesOnScreen; i++) {
       final ValueHistory history = ValueHistory(
         rate: pair.koef + Random().nextDouble() * (0.01 * Random().nextInt(5)) * pair.koef,
@@ -119,7 +119,7 @@ abstract class _SimulatorStateBase with Store {
     userBalance = service<Settings>().balance;
     _generateInitialData();
 
-    Stream.periodic(aSecond * 60).listen((_) {
+    Stream.periodic(aSecond * 10).listen((_) {
       final DateTime now = DateTime.now();
 
       final ValueHistory history = ValueHistory(

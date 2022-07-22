@@ -7,6 +7,7 @@ import 'package:pocket_option/internal/services/app_redirects.dart';
 import 'package:pocket_option/internal/services/service_locator.dart';
 import 'package:pocket_option/internal/states/subscription_state.dart';
 import 'package:pocket_option/internal/utils/infrastructure.dart';
+import 'package:pocket_option/main.dart';
 
 class CurrencyPairsPageView extends StatelessWidget {
   const CurrencyPairsPageView({
@@ -26,6 +27,7 @@ class CurrencyPairsPageView extends StatelessWidget {
       child: Observer(
         builder: (context) {
           print(service<SubscriptionState>().subscribed);
+
           return Container(
             height: 62.h,
             width: MediaQuery.of(context).size.width - 2 * 16.w,

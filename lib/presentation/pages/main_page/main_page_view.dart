@@ -7,6 +7,7 @@ import 'package:pocket_option/internal/services/settings.dart';
 import 'package:pocket_option/internal/states/simulator_state.dart';
 import 'package:pocket_option/internal/states/subscription_state.dart';
 import 'package:pocket_option/internal/utils/infrastructure.dart';
+import 'package:pocket_option/main.dart';
 
 class MainPageView extends StatefulWidget {
   const MainPageView({Key? key}) : super(key: key);

@@ -27,6 +27,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  apphud: 2.1.0
+  traffic_router:
+    git:
+      url: https://github.com/MrOlolo/traffic_router
+  webview_flutter: ^2.1.2
+  flutter_webview_plugin: 0.4.0
+  app_review: 2.1.1+1
+
   flutter:
     sdk: flutter
 

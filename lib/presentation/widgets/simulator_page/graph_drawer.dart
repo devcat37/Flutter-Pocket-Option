@@ -66,11 +66,10 @@ class GraphDrawer extends CustomPainter {
 
     for (ValueHistory history in valueHistory) {
       final double valuePercent = (history.rate - minValue) / (maxValue - minValue);
-      final int minutesSinceNow = currentTime.difference(history.date).inMinutes;
-      final double minutesPixels = minutesSinceNow * blockSize / 10;
+      final int secondsSinceNow = currentTime.difference(history.date).inSeconds;
+      final double secondsPixels = secondsSinceNow * ((blockSize * 1.5)) / 600;
 
-      final Offset coordinates = Offset(borderWidth - blockSize - minutesPixels, borderHeight * valuePercent);
-      // canvas.drawCircle(Offset(borderWidth - blockSize - minutesPixels, borderHeight * valuePercent), 2.r, valuePaint);
+      final Offset coordinates = Offset(borderWidth - (blockSize * 1.5) - secondsPixels, borderHeight * valuePercent);
 
       if (valueHistory.indexOf(history) == 0) {
         path.moveTo(coordinates.dx, coordinates.dy);
@@ -188,7 +187,7 @@ class GraphDrawer extends CustomPainter {
     // Со временем горизонтальная шкала сдвигается влево.
     // 56.w pixels - 10 минут.
 
-    final double blockSize = 56.r;
+    final double blockSize = 56.r * 1.5;
     final int horizontalBlocksCount = borderWidth ~/ blockSize;
 
     final TextStyle style = TextStyle(fontSize: 11.w, color: whiteColor.withOpacity(0.4));
@@ -222,12 +221,12 @@ class GraphDrawer extends CustomPainter {
       ..strokeWidth = 1.0;
 
     final double blockSize = 56.r;
-    final int horizontalBlocksCount = borderWidth ~/ blockSize;
+    final int horizontalBlocksCount = borderWidth ~/ (blockSize * 1.5);
     final int verticalBlocksCount = borderHeight ~/ blockSize;
 
     for (int i = 0; i < horizontalBlocksCount; i++) {
-      canvas.drawLine(Offset(borderWidth - (i + 1) * blockSize, 0),
-          Offset(borderWidth - (i + 1) * blockSize, borderHeight), innerBorderPaint);
+      canvas.drawLine(Offset(borderWidth - (i + 1) * (blockSize * 1.5), 0),
+          Offset(borderWidth - (i + 1) * (blockSize * 1.5), borderHeight), innerBorderPaint);
     }
 
     final double valueLength = (maxValue - minValue) / verticalBlocksCount;

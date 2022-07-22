@@ -1,11 +1,14 @@
 import 'package:rate_my_app/rate_my_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void openPrivacy() => launchUrl(Uri.parse('https://google.com'));
+void openPrivacy() => launchUrl(
+    Uri.parse('https://docs.google.com/document/d/1w7JqgtAxNLVrtctWiZFmkKD_d-ufGoGla_BZ4DyvoTU/edit?usp=sharing'));
 
-void openTerms() => launchUrl(Uri.parse('https://google.com'));
+void openTerms() => launchUrl(
+    Uri.parse('https://docs.google.com/document/d/1WAo6BFR6MLVsZX7h1jlLPJFa7D_O70HgibbiDEVgtCs/edit?usp=sharing'));
 
-void openSupport() => launchUrl(Uri.parse('https://google.com'));
+void openSupport() => launchUrl(Uri.parse(
+    'https://docs.google.com/forms/d/e/1FAIpQLSfkbUMmAjJALSmV1iqgVdgAzKsqeHSPYIZOygkhvPdxzHhAwA/viewform?usp=sf_link'));
 
 RateMyApp rateMyApp = RateMyApp(
   preferencesPrefix: 'rateMyApp_',

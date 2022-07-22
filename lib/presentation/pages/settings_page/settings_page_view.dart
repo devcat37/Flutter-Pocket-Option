@@ -8,6 +8,7 @@ import 'package:pocket_option/internal/services/service_locator.dart';
 import 'package:pocket_option/internal/services/settings.dart';
 import 'package:pocket_option/internal/states/subscription_state.dart';
 import 'package:pocket_option/internal/utils/infrastructure.dart';
+import 'package:pocket_option/main.dart';
 import 'package:pocket_option/presentation/global/icons/pocket_icons.dart';
 import 'package:share_plus/share_plus.dart';
 

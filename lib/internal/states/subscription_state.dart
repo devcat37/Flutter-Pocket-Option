@@ -1,5 +1,6 @@
 import 'package:mobx/mobx.dart';
 import 'package:pocket_option/internal/utils/infrastructure.dart';
+import 'package:pocket_option/main.dart';
 
 part 'subscription_state.g.dart';
 
@@ -12,14 +13,18 @@ abstract class _SubscriptionStateBase with Store {
   Future<bool> subscribe() async {
     await Future.delayed(aSecond * 2);
 
-    subscribed = true;
-    return true;
+    return await purchase();
+
+    // subscribed = true;
+    // return true;
   }
 
-  Future<bool> restore() async {
+  Future<bool> restorePurchase() async {
     await Future.delayed(aSecond * 2);
 
-    subscribed = true;
-    return true;
+    return await restore();
+
+    // subscribed = true;
+    // return true;
   }
 }

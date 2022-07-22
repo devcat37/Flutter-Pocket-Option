@@ -48,8 +48,8 @@ class _SubscriptionPageViewState extends State<SubscriptionPageView> {
                     TextSpan(
                       style: TextStyle(fontSize: 27.h, fontWeight: FontWeight.bold, color: whiteColor),
                       children: [
-                        TextSpan(text: '• '),
-                        TextSpan(text: 'Ads '),
+                        const TextSpan(text: '• '),
+                        const TextSpan(text: 'Ads '),
                         TextSpan(
                           text: 'removing',
                           style: TextStyle(
@@ -63,13 +63,13 @@ class _SubscriptionPageViewState extends State<SubscriptionPageView> {
                     TextSpan(
                       style: TextStyle(fontSize: 27.h, fontWeight: FontWeight.bold, color: whiteColor),
                       children: [
-                        TextSpan(text: '• '),
+                        const TextSpan(text: '• '),
                         TextSpan(
                           text: 'All ',
                           style: TextStyle(
                               fontSize: 27.h, fontWeight: FontWeight.bold, color: whiteColor.withOpacity(0.4)),
                         ),
-                        TextSpan(text: 'activities '),
+                        const TextSpan(text: 'activities '),
                         TextSpan(
                           text: 'access',
                           style: TextStyle(
@@ -135,7 +135,7 @@ class _SubscriptionPageViewState extends State<SubscriptionPageView> {
                   isLoading = true;
                 });
 
-                final result = await service<SubscriptionState>().restore();
+                final result = await service<SubscriptionState>().restorePurchase();
 
                 setState(() {
                   isLoading = false;
